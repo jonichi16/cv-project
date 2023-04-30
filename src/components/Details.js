@@ -7,6 +7,7 @@ class Details extends Component {
     super();
 
     this.state = {
+      parent: 'div',
       contents: [
         {
           id: uniqid(),
@@ -47,11 +48,15 @@ class Details extends Component {
   };
 
   render() {
-    const { contents } = this.state;
+    const { parent, contents } = this.state;
 
     return (
       <section className='details'>
-        <SectionInput contents={contents} handleChange={this.handleChange} />
+        <SectionInput
+          parent={parent}
+          contents={contents}
+          handleChange={this.handleChange}
+        />
       </section>
     );
   }

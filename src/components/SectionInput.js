@@ -1,12 +1,13 @@
 import React from 'react';
 
-const SectionInput = ({ contents, handleChange }) => {
+const SectionInput = ({ parent, contents, handleChange }) => {
   return contents.map((content) => {
+    const Parent = parent;
     const Tag = content.tag;
 
     if (Tag === 'input') {
       return (
-        <div className='input' key={content.id}>
+        <Parent key={content.id}>
           <Tag
             className={content.class}
             name={content.name}
@@ -14,11 +15,11 @@ const SectionInput = ({ contents, handleChange }) => {
             onChange={handleChange}
             placeholder={content.placeholder}
           />
-        </div>
+        </Parent>
       );
     } else {
       return (
-        <div className='input' key={content.id}>
+        <Parent key={content.id}>
           <Tag
             className={content.class}
             name={content.name}
@@ -26,7 +27,7 @@ const SectionInput = ({ contents, handleChange }) => {
             onChange={handleChange}
             placeholder={content.placeholder}
           ></Tag>
-        </div>
+        </Parent>
       );
     }
   });
