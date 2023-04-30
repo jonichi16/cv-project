@@ -76,6 +76,34 @@
   margin-bottom: 0.25em;
 }
 
+.skills-list {
+  list-style-position: inside;
+  color: var(--color-light-50);
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.skill {
+  max-width: calc(100% - 22px);
+}
+
+.section-btn {
+  display: flex;
+  gap: 0.5em;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.25em 0;
+  border: none;
+  border-radius: 100px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  font-weight: 700;
+}
+
 @media screen and (min-width: 425px) {
   .logo {
     font-size: 2rem;
