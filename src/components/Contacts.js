@@ -7,7 +7,6 @@ class Contacts extends Component {
     super();
 
     this.state = {
-      parent: 'div',
       contents: [
         {
           id: uniqid(),
@@ -48,14 +47,14 @@ class Contacts extends Component {
   };
 
   render() {
-    const { parent, contents } = this.state;
+    const { contents } = this.state;
 
     return (
       <section className='contacts'>
         <h2 className='section-title uppercase'>Contacts</h2>
         <hr />
         <SectionInput
-          parent={parent}
+          parent={'div'}
           contents={contents}
           handleChange={this.handleChange}
         />
