@@ -26,7 +26,7 @@ class Contacts extends Component {
         },
         {
           id: uniqid(),
-          tag: 'input',
+          tag: 'textarea',
           name: 'address',
           class: 'section-input address',
           value: '',

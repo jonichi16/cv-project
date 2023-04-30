@@ -43,13 +43,19 @@
   gap: 3em;
 }
 
-.left input {
+.left input,
+.left textarea {
   width: 100%;
   background-color: inherit;
   color: var(--color-light-50);
   border: none;
   outline: none;
   line-height: 1;
+}
+
+.left textarea {
+  padding: 0.5em 0;
+  resize: vertical;
 }
 
 .left hr {
