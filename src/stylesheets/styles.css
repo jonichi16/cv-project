@@ -36,36 +36,65 @@
 
 .left {
   width: 35%;
-  padding: 2em 1.5em;
   background-color: var(--color-dark-800);
+}
+
+.right {
+  flex: 1;
+  margin: 1em 0;
+}
+
+.left,
+.right {
+  padding: 2em;
   display: flex;
   flex-direction: column;
   gap: 3em;
 }
 
-.left input,
-.left textarea {
+input,
+textarea {
   width: 100%;
   background-color: inherit;
-  color: var(--color-light-50);
   border: none;
   outline: none;
   line-height: 1;
 }
 
-.left textarea {
+textarea {
   padding: 0.5em 0;
   resize: vertical;
 }
 
-.left hr {
+.left input,
+.left textarea {
+  color: var(--color-light-50);
+}
+
+.right textarea {
+  height: 7.25em;
+  line-height: 1.2;
+}
+
+hr {
   margin-bottom: 1em;
 }
 
+.left hr {
+  border-color: var(--color-dark-50);
+}
+
+.right hr {
+  border-color: var(--color-dark-800);
+}
+
 .section-title {
-  color: var(--color-light-50);
   font-weight: 700;
   letter-spacing: 0.2em;
+}
+
+.left .section-title {
+  color: var(--color-light-50);
 }
 
 .section-input {
