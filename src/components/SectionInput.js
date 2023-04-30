@@ -9,6 +9,7 @@ const SectionInput = ({ parent, contents, handleChange }) => {
       return (
         <Parent key={content.id}>
           <Tag
+            id={content.id}
             className={content.class}
             name={content.name}
             value={content.value}
@@ -21,6 +22,7 @@ const SectionInput = ({ parent, contents, handleChange }) => {
       return (
         <Parent key={content.id}>
           <Tag
+            id={content.id}
             className={content.class}
             name={content.name}
             value={content.value}
