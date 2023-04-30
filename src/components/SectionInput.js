@@ -8,6 +8,7 @@ const SectionInput = ({ contents, handleChange }) => {
       return (
         <div className='input' key={content.id}>
           <Tag
+            className={content.class}
             name={content.name}
             value={content.value}
             onChange={handleChange}
@@ -19,6 +20,7 @@ const SectionInput = ({ contents, handleChange }) => {
       return (
         <div className='input' key={content.id}>
           <Tag
+            className={content.class}
             name={content.name}
             value={content.value}
             onChange={handleChange}

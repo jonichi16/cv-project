@@ -3,7 +3,9 @@ import Details from './Details';
 
 const Resume = () => (
   <div className='resume'>
-    <Details />
+    <div className='left'>
+      <Details />
+    </div>
   </div>
 );
 
