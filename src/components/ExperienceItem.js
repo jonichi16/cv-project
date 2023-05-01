@@ -23,7 +23,7 @@ const ExperienceItem = ({ exp, handleItemChange }) => {
             maxLength='4'
             placeholder='From'
           />
-          <span className='dash'>-</span>
+          <span className='dash'>&ndash;</span>
           <input
             type='text'
             id={`to${exp.id}`}
