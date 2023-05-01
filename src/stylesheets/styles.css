@@ -72,7 +72,6 @@ textarea {
 }
 
 .right textarea {
-  height: 7.25em;
   line-height: 1.2;
 }
 
@@ -111,15 +110,51 @@ hr {
   margin-bottom: 0.25em;
 }
 
-.skills-list {
-  list-style-position: inside;
-  color: var(--color-light-50);
+.skills-list,
+.experience-list {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 1em;
+  padding-left: 20px;
+}
+
+.experience-list {
+  gap: 1em;
+}
+
+.skills-list {
+  color: var(--color-light-50);
 }
 
 .skill {
-  max-width: calc(100% - 22px);
+  padding-bottom: 0;
+}
+
+.form-input {
+  padding: 0;
+}
+
+.work-details {
+  margin-bottom: 0.5em;
+}
+
+.exp-year {
+  display: flex;
+  gap: 0.25em;
+}
+
+.from {
+  max-width: 4ch;
+}
+
+.position {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.description {
+  font-size: 0.875rem;
 }
 
 .section-btn {
