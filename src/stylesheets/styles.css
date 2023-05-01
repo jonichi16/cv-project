@@ -62,7 +62,6 @@ textarea {
 }
 
 textarea {
-  padding: 0.5em 0;
   resize: vertical;
 }
 
@@ -108,6 +107,20 @@ hr {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.25em;
+}
+
+.contact-item {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.contact-item input {
+  padding: 0;
+}
+
+.contact-item textarea {
+  line-height: 1.3;
 }
 
 .skills-list,
