@@ -4,6 +4,7 @@ import Contacts from './Contacts';
 import Skills from './Skills';
 import Profile from './Profile';
 import Experience from './Experience';
+import Education from './Education';
 
 class Resume extends Component {
   constructor() {
@@ -104,6 +105,12 @@ class Resume extends Component {
           <Profile profile={data.profile} handleChange={this.handleChange} />
           <Experience
             experience={data.experience}
+            handleItemChange={this.handleItemChange}
+            handleAddItem={this.handleAddItem}
+            handleDeleteItem={this.handleDeleteItem}
+          />
+          <Education
+            education={data.education}
             handleItemChange={this.handleItemChange}
             handleAddItem={this.handleAddItem}
             handleDeleteItem={this.handleDeleteItem}
