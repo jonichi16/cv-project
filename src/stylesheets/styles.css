@@ -130,12 +130,12 @@ hr {
 .btn {
   width: 100%;
   padding: 0.25em 0;
-  border: none;
+  border: 2px solid var(--color-dark-800);
   border-radius: 100px;
 }
 
 .btn:hover {
-  opacity: 0.8;
+  background-color: var(--color-dark-400);
   font-weight: 700;
 }
 

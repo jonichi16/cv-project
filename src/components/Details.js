@@ -1,64 +1,34 @@
-import React, { Component } from 'react';
-import SectionInput from './SectionInput';
-import uniqid from 'uniqid';
+import React from 'react';
 
-class Details extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      contents: [
-        {
-          id: uniqid(),
-          tag: 'input',
-          name: 'first-name',
-          class: 'first-name uppercase',
-          value: '',
-          placeholder: 'First Name',
-        },
-        {
-          id: uniqid(),
-          tag: 'input',
-          name: 'last-name',
-          class: 'last-name uppercase',
-          value: '',
-          placeholder: 'Last Name',
-        },
-        {
-          id: uniqid(),
-          tag: 'input',
-          name: 'occupation',
-          class: 'occupation uppercase',
-          value: '',
-          placeholder: 'Occupation',
-        },
-      ],
-    };
-  }
-
-  handleChange = (e) => {
-    const { name, value } = e.target;
-    const { contents } = this.state;
-    const index = contents.findIndex((c) => c.name === name);
-    contents[index].value = value;
-    this.setState({
-      contents,
-    });
-  };
-
-  render() {
-    const { contents } = this.state;
-
-    return (
-      <section className='details'>
-        <SectionInput
-          parent={'div'}
-          contents={contents}
-          handleChange={this.handleChange}
-        />
-      </section>
-    );
-  }
-}
+const Details = ({ firstName, lastName, occupation, handleChange }) => {
+  return (
+    <section className='details'>
+      <input
+        type='text'
+        name='firstName'
+        value={firstName}
+        onChange={handleChange}
+        className='first-name uppercase'
+        placeholder='First Name'
+      />
+      <input
+        type='text'
+        name='lastName'
+        value={lastName}
+        onChange={handleChange}
+        className='last-name uppercase'
+        placeholder='Last Name'
+      />
+      <input
+        type='text'
+        name='occupation'
+        value={occupation}
+        onChange={handleChange}
+        className='occupation uppercase'
+        placeholder='Occupation'
+      />
+    </section>
+  );
+};
 
 export default Details;

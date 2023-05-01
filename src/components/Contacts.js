@@ -1,66 +1,36 @@
-import React, { Component } from 'react';
-import SectionInput from './SectionInput';
-import uniqid from 'uniqid';
+import React from 'react';
 
-class Contacts extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      contents: [
-        {
-          id: uniqid(),
-          tag: 'input',
-          name: 'contact-number',
-          class: 'section-input contact-number',
-          value: '',
-          placeholder: 'Contact Number',
-        },
-        {
-          id: uniqid(),
-          tag: 'input',
-          name: 'email',
-          class: 'section-input email',
-          value: '',
-          placeholder: 'Email',
-        },
-        {
-          id: uniqid(),
-          tag: 'textarea',
-          name: 'address',
-          class: 'section-input address',
-          value: '',
-          placeholder: 'Address',
-        },
-      ],
-    };
-  }
-
-  handleChange = (e) => {
-    const { name, value } = e.target;
-    const { contents } = this.state;
-    const index = contents.findIndex((c) => c.name === name);
-    contents[index].value = value;
-    this.setState({
-      contents,
-    });
-  };
-
-  render() {
-    const { contents } = this.state;
-
-    return (
-      <section className='contacts'>
-        <h2 className='section-title uppercase'>Contacts</h2>
-        <hr />
-        <SectionInput
-          parent={'div'}
-          contents={contents}
-          handleChange={this.handleChange}
-        />
-      </section>
-    );
-  }
-}
+const Contacts = ({ number, email, address, handleChange }) => {
+  return (
+    <section className='contacts'>
+      <h2 className='section-title uppercase'>Contacts</h2>
+      <hr />
+      <input
+        type='text'
+        name='number'
+        value={number}
+        onChange={handleChange}
+        className='section-input number'
+        placeholder='Contact Number'
+      />
+      <input
+        type='text'
+        name='email'
+        value={email}
+        onChange={handleChange}
+        className='section-input email'
+        placeholder='Email'
+      />
+      <textarea
+        name='address'
+        value={address}
+        onChange={handleChange}
+        className='section-input address'
+        placeholder='Address'
+        rows='2'
+      ></textarea>
+    </section>
+  );
+};
 
 export default Contacts;

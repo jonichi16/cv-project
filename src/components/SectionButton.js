@@ -1,12 +1,20 @@
 import React from 'react';
 
-const SectionButton = ({ handleAddClick, handleDeleteClick }) => {
+const SectionButton = ({ member, handleAddClick, handleDeleteClick }) => {
   return (
     <div className='section-btn'>
-      <button className='btn uppercase' onClick={handleAddClick}>
+      <button
+        className='btn uppercase'
+        data-member={member}
+        onClick={handleAddClick}
+      >
         Add
       </button>
-      <button className='btn uppercase' onClick={handleDeleteClick}>
+      <button
+        className='btn uppercase'
+        data-member={member}
+        onClick={handleDeleteClick}
+      >
         Delete
       </button>
     </div>
