@@ -3,6 +3,7 @@ import Details from './Details';
 import Contacts from './Contacts';
 import Skills from './Skills';
 import Profile from './Profile';
+import Experience from './Experience';
 
 class Resume extends Component {
   constructor() {
@@ -34,13 +35,13 @@ class Resume extends Component {
 
   handleItemChange = (member, id, name, value) => {
     const dataMember = this.state.data[member];
-    const newValue = dataMember.find((i) => i.id === id);
-    newValue[name] = value;
 
     this.setState((prevState) => ({
       data: {
         ...prevState.data,
-        [member]: dataMember,
+        [member]: dataMember.map((i) =>
+          i.id === id ? { ...i, [name]: value } : i
+        ),
       },
     }));
   };
@@ -101,6 +102,12 @@ class Resume extends Component {
         </div>
         <div className='right'>
           <Profile profile={data.profile} handleChange={this.handleChange} />
+          <Experience
+            experience={data.experience}
+            handleItemChange={this.handleItemChange}
+            handleAddItem={this.handleAddItem}
+            handleDeleteItem={this.handleDeleteItem}
+          />
         </div>
       </div>
     );
