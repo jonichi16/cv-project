@@ -111,7 +111,8 @@ hr {
 }
 
 .skills-list,
-.experience-list {
+.experience-list,
+.education-list {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -119,7 +120,8 @@ hr {
   padding-left: 20px;
 }
 
-.experience-list {
+.experience-list,
+.education-list {
   gap: 1em;
 }
 
@@ -148,7 +150,8 @@ hr {
   max-width: 4ch;
 }
 
-.position {
+.position,
+.degree {
   font-weight: 700;
   font-size: 1.125rem;
 }
