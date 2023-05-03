@@ -12,6 +12,7 @@ class Resume extends Component {
 
     this.state = {
       data: {
+        image: '',
         firstName: '',
         lastName: '',
         occupation: '',
@@ -83,6 +84,7 @@ class Resume extends Component {
       <div className='resume'>
         <div className='left'>
           <Details
+            image={data.image}
             firstName={data.firstName}
             lastName={data.lastName}
             occupation={data.occupation}

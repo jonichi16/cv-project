@@ -1,8 +1,18 @@
 import React from 'react';
+import Image from './Image';
 
-const Details = ({ firstName, lastName, occupation, handleChange }) => {
+const Details = ({ image, firstName, lastName, occupation, handleChange }) => {
   return (
     <section className='details'>
+      <div className='image'>
+        <Image image={image} />
+        <input
+          type='file'
+          className='image-input'
+          name='image'
+          accept='image/*'
+        />
+      </div>
       <input
         type='text'
         name='firstName'
